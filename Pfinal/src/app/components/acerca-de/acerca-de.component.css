@@ -10,6 +10,7 @@ div {
 #nombre {
   font-weight: bold;
   margin-top: 20%;
+  font-size: 25px;    
 }
 
 /*estilo de la foto de perfil de acuerdo a los tamaños de pantalla*/
@@ -20,7 +21,7 @@ div {
     border-radius: 100%;
     box-shadow: 3px 3px 3px rgb(215, 179, 226);
     left: 2%;
-    top: 300px;
+    top: 400px;
   }
 }
 @media (max-width: 575px) {
@@ -30,6 +31,6 @@ div {
     border-radius: 100%;
     box-shadow: 3px 3px 3px rgb(215, 179, 226);
     left: 35%;
-    top: 150px;
+    top: 200px;
   }
 }
