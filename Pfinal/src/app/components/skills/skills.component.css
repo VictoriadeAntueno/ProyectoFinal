@@ -1,0 +1,10 @@
+.row {
+  background-color: rgb(233, 212, 233);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  padding: 5px;
+  background-color: rgb(221, 185, 221);
+}

@@ -9,3 +9,9 @@ div {
 h2, h3 {
   display: inline;
 }
+
+h1 {
+  text-align: center;
+  padding: 5px;
+  background-color: rgb(221, 185, 221)
+}
