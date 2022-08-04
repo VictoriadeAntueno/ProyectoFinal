@@ -1,17 +1,17 @@
 .row {
+  background-color: rgb(233, 212, 233); 
+}
+
+.card {
   padding: 25px;
 }
   
 div {
   background-color: rgb(233, 212, 233);
 }
-  
-h2, h3 {
-  display: inline;
-}
 
 h1 {
   text-align: center;
-  padding: 5px; 
+  padding: 5px;
   background-color: rgb(233, 200, 233);
 }
