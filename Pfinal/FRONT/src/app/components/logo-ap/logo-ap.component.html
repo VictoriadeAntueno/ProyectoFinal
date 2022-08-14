@@ -8,7 +8,8 @@
         <a href="https://www.instagram.com/cacaru_coco/" target="_blank" rel="noopener noreferrer"><img src="../../../assets/ig.png" alt="ig"></a>
         <a href="https://www.linkedin.com/in/victoria-de-antueno---/" target="_blank" rel="noopener noreferrer"><img src="../../../assets/in.png" alt="in"></a>
         <a href="https://github.com/VictoriadeAntueno" target="_blank" rel="noopener noreferrer"><img src="../../../assets/gh.png" alt="gh"></a>
-        <button type="button" class="btn btn-outline-dark" (click)="login()">Ingresar</button>
+        <button type="button" class="btn btn-outline-dark" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+        <button type="button" class="btn btn-outline-dark" (click)="onLogOut()" *ngIf="isLogged">Salir</button>
       </div>
     </div>
   </div>

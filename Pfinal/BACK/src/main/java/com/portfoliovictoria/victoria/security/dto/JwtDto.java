@@ -1,4 +1,3 @@
-
 package com.portfoliovictoria.victoria.security.dto;
 
 import java.util.Collection;
@@ -6,9 +5,8 @@ import org.springframework.security.core.GrantedAuthority;
 
 
 public class JwtDto {
-    
     private String token;
-    private String beared = "Beared";
+    private String bearer = "Bearer";
     private String nombreUsuario;
     private Collection<? extends GrantedAuthority> authorities;
     
@@ -34,11 +32,11 @@ public class JwtDto {
     }
 
     public String getBeared() {
-        return beared;
+        return bearer;
     }
 
     public void setBeared(String beared) {
-        this.beared = beared;
+        this.bearer = beared;
     }
 
     public String getNombreUsuario() {

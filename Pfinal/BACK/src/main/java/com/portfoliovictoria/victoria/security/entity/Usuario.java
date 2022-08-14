@@ -1,7 +1,5 @@
-
 package com.portfoliovictoria.victoria.security.entity;
 
-import static com.fasterxml.jackson.databind.util.ClassUtil.name;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Column;
@@ -14,7 +12,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotNull;
-
 
 @Entity
 public class Usuario {
@@ -31,7 +28,7 @@ public class Usuario {
     @NotNull
     private String password;
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable (name = "usuario_rol", joinColumns = @JoinColumn(name ="usuario_id"), inverseJoinColumns = @JoinColumn(name ="rol_id"))
+    @JoinTable(name = "usuario_rol", joinColumns = @JoinColumn(name ="usuario_id"), inverseJoinColumns = @JoinColumn(name = "rol_id"))
     private Set<Rol> roles = new HashSet<>();
     
     //constructores
