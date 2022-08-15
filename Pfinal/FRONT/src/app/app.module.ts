@@ -20,6 +20,9 @@ import { LoginComponent } from './components/login/login.component'
 import { FormsModule } from '@angular/forms';
 import { InterceptorProvider } from './service/interceptor-service';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+import { NeweducacionComponent } from './components/educacion/neweducacion.component';
+import { EditeducacionComponent } from './components/educacion/editeducacion.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,13 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
     SkillsComponent,
     ProyectoComponent,
     FooterComponent, 
-    FotoPerfilComponent, HomeComponent, LoginComponent, NewExperienciaComponent   
+    FotoPerfilComponent,
+    HomeComponent,
+    LoginComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    NeweducacionComponent,
+    EditeducacionComponent     
   ],
   imports: [
     BrowserModule,

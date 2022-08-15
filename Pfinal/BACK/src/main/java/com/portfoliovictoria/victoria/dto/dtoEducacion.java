@@ -3,24 +3,19 @@ package com.portfoliovictoria.victoria.dto;
 
 import javax.validation.constraints.NotBlank;
 
-
-public class dtoExperiencia {
+public class dtoEducacion {
     @NotBlank
     private String nombreE;
     @NotBlank
     private String descripcionE;
-    
-    //contructor
 
-    public dtoExperiencia() {
+    public dtoEducacion() {
     }
 
-    public dtoExperiencia(String nombreE, String descripcionE) {
+    public dtoEducacion(String nombreE, String descripcionE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
     }
-    
-    //getersandsetters
 
     public String getNombreE() {
         return nombreE;
