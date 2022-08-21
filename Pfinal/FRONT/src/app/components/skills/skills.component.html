@@ -1,99 +1,33 @@
 <div class="row">
   <h1>Hard and soft skills</h1>
-  <div class="text-center col-sm-4 col-md-4 col-lg4">
-    <circle-progress
-      [title]="'Escucha activa'"
-      [titleFontSize]="'1em'"
-      [percent]="95"
-      [radius]="90"
-      [subtitle]="'95%'"
-      [showUnits]="false"
-      [outerStrokeWidth]="18"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'rgb(186, 90, 186)'"
-      [innerStrokeColor]="'rgb(221, 160, 221)'"
-      [animation]="true"
-      [animationDuration]="900"
-  > </circle-progress>
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-secondary" routerLink="/nuevaskills" *ngIf="isLogged">
+      <i class="bi bi-file-earmark-plus">Agregar skills</i>            
+    </button>
   </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg4">
-    <circle-progress
-      [title]="'Empatía'"
-      [titleFontSize]="'1em'"
-      [percent]="95"
-      [radius]="90"
-      [subtitle]="'95%'"
-      [showUnits]="false"
-      [outerStrokeWidth]="18"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'rgb(186, 90, 186)'"
-      [innerStrokeColor]="'rgb(221, 160, 221)'"
-      [animation]="true"
-      [animationDuration]="900"
-  > </circle-progress>
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Skills of skills">
+          <td>
+              <h2>{{Skills.nombreS}}</h2>
+            </td>
+            <td>
+              <h3>{{Skills.porcentajeS}}</h3>
+          </td>
+          <td *ngIf="isLogged">
+              <button class="btn btn-light" routerLink="/editskills/{{Skills.id}}">
+                <i class="bi bi-pencil"></i> EDITAR</button>
+            </td>
+            <td *ngIf="isLogged">
+              <button class="btn btn-outline-danger" (click)="delete(Skills.id)">
+                <i class="bi bi-trash3"></i> ELIMINAR</button>
+                </td>
+            </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg4">
-    <circle-progress
-      [title]="'Trabajo en equipo'"
-      [titleFontSize]="'1em'"
-      [percent]="95"
-      [radius]="90"
-      [subtitle]="'95%'"
-      [showUnits]="false"
-      [outerStrokeWidth]="18"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'rgb(186, 90, 186)'"
-      [innerStrokeColor]="'rgb(221, 160, 221)'"
-      [animation]="true"
-      [animationDuration]="900"
-  > </circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg4">
-    <circle-progress
-      [title]="'Programación'"
-      [titleFontSize]="'1em'"
-      [percent]="25"
-      [radius]="90"
-      [subtitle]="'25%'"
-      [showUnits]="false"
-      [outerStrokeWidth]="18"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'rgb(186, 90, 186)'"
-      [innerStrokeColor]="'rgb(221, 160, 221)'"
-      [animation]="true"
-      [animationDuration]="900"
-  > </circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg4">
-    <circle-progress
-      [title]="'Inglés'"
-      [titleFontSize]="'1em'"
-      [percent]="45"
-      [radius]="90"
-      [subtitle]="'45%'"
-      [showUnits]="false"
-      [outerStrokeWidth]="18"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'rgb(186, 90, 186)'"
-      [innerStrokeColor]="'rgb(221, 160, 221)'"
-      [animation]="true"
-      [animationDuration]="900"
-  > </circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg4">
-    <circle-progress
-      [title]="'Atención al cliente'"
-      [titleFontSize]="'1em'"
-      [percent]="95"
-      [radius]="90"
-      [subtitle]="'95%'"
-      [showUnits]="false"
-      [outerStrokeWidth]="18"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'rgb(186, 90, 186)'"
-      [innerStrokeColor]="'rgb(221, 160, 221)'"
-      [animation]="true"
-      [animationDuration]="900"
-  > </circle-progress>
+
 </div>
 
