@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SkillsService {
-  URL = 'http://localhost:8080//skills/';
+  URL = 'http://localhost:8080/skills/';
 
   constructor(private httpClient : HttpClient) { }
 

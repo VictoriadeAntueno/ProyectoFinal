@@ -11,17 +11,11 @@ import { SkillsService } from 'src/app/service/skills.service';
 export class EditskillsComponent implements OnInit {
   skills: Skills = null;
 
-  constructor(
-    private skillsS: SkillsService,
-    private activatedRouter: ActivatedRoute,
-    private router: Router
-  ) { }
+  constructor(private skillsS: SkillsService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.skillsS.detail(id).subscribe(
-      data => {
-        this.skills = data;
+    this.skillsS.detail(id).subscribe(data => {this.skills = data;
       }, err => {
         alert ("error al modificar SKILLS");
         this.router.navigate(['']);
@@ -34,11 +28,10 @@ export class EditskillsComponent implements OnInit {
       data => {
         this.router.navigate(['']);
       }, err => {
-        alert(" ERROR AL MODIFICAR LA SKILL-HABILIDAD");
+        alert ("Error al editar habilidad");
         this.router.navigate(['']);
       }
     )
   }
-
 
 }

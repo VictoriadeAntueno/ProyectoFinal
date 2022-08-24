@@ -13,7 +13,6 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FotoPerfilComponent } from './components/foto-perfil/foto-perfil.component';
 import {HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component'
@@ -28,6 +27,9 @@ import { EditproyectoComponent } from './components/proyecto/editproyecto.compon
 import { ReactiveFormsModule} from '@angular/forms';
 import { NewskillsComponent } from './components/skills/newskills.component';
 import { EditskillsComponent } from './components/skills/editskills.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -42,7 +44,6 @@ import { EditskillsComponent } from './components/skills/editskills.component';
     SkillsComponent,
     ProyectoComponent,
     FooterComponent, 
-    FotoPerfilComponent,
     HomeComponent,
     LoginComponent,
     NewExperienciaComponent,
@@ -62,6 +63,8 @@ import { EditskillsComponent } from './components/skills/editskills.component';
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()),
   ],
   providers: [
     InterceptorProvider

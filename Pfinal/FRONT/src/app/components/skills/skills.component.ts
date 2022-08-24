@@ -24,11 +24,7 @@ export class SkillsComponent implements OnInit {
   }
 
   cargarSkills(): void{
-    this.skillsS.lista().subscribe(
-      data => {
-        this.skills = data;
-      }
-    )
+    this.skillsS.lista().subscribe(data => { this.skills = data;});
   }
 
   delete(id?: number){

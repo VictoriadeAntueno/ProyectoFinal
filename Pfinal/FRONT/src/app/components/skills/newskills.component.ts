@@ -9,8 +9,8 @@ import { SkillsService } from 'src/app/service/skills.service';
   styleUrls: ['./newskills.component.css']
 })
 export class NewskillsComponent implements OnInit {
-  nombreS: string;
-  porcentajeS: string;
+  nombreS: string = '';
+  porcentajeS: string = '';
 
   constructor(private skillsS: SkillsService, private router: Router) { }
 

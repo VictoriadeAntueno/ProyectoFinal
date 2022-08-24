@@ -1,3 +1,9 @@
-<div>
-  <img src="../../../assets/banner.jpg" alt="banner">
+<div class="conteiner">
+  <div *ngFor="let image of images">
+    <img class="img-fluid" [src]="image" alt="banner">
+  </div>
+  <div class="input-group">
+    <input (change)="subirArchivo($event)" type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+  </div>
 </div>
